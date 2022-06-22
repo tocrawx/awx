@@ -1,0 +1,12 @@
+---
+
+- name: cisco_show_access_session
+  hosts: all
+  gather_facts: false
+
+
+  tasks:
+
+   - name: run show access session
+     cisco.ios.ios_command:
+      commands: show access-session | include Unauth
